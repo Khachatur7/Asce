@@ -1,0 +1,387 @@
+/* Применяем ко всей странице */
+/* Для Chrome, Edge, и Safari */
+::-webkit-scrollbar {
+  width: 12px;
+  /* Ширина полосы прокрутки */
+  height: 12px;
+  /* Высота горизонтальной полосы прокрутки */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Цвет трека */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Цвет бегунка */
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+  /* Отступ вокруг бегунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Цвет бегунка при наведении */
+}
+
+/* Для Firefox */
+html {
+  scrollbar-width: thin;
+  /* Толщина полосы прокрутки */
+  scrollbar-color: #888 #f1f1f1;
+  /* Цвет бегунка и трека */
+}
+
+/* Дополнительные стили для трека и бегунка */
+body {
+  overflow-y: scroll;
+}
+
+
+body {
+  user-select: none;
+}
+
+/* Применяем к отдельным элементам */
+.no-select {
+  user-select: none;
+}
+
+.slide {
+  width: 100%;
+  transition: .3s;
+  position: relative;
+}
+
+.slide.wait {
+  opacity: 0;
+}
+
+.slide * {
+  z-index: 2;
+}
+
+.slide.black {
+  background: #000;
+}
+
+.slide.white {
+  background: var(--color-bg-light);
+}
+
+.slide__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 191px;
+}
+
+.slide__illustration {
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.slide__image {
+  width: 387px;
+  position: relative;
+}
+
+
+.slide__image-container {
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.slide__image-back {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(56.5px);
+}
+
+.slide__image-back.black {
+  background: white;
+  width: 166px;
+  height: 179px;
+  top: 53px;
+  border-radius: 50%;
+}
+
+.slide__image-back.white {
+  top: 173px;
+  width: 276px;
+  height: 146px;
+  background: #808080;
+  border-radius: 276px;
+}
+
+.slide__title {
+  font-size: 66px;
+  font-weight: 600;
+  margin-bottom: 143px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Mazzard;
+}
+
+.slide__title.white {
+  background-image: var(--gradient-2);
+}
+
+.slide__title.black {
+  background-image: var(--gradient-1);
+  text-shadow: 0px 4px 57px #000;
+}
+
+.slide__link {
+  display: flex;
+  align-items: center;
+  background: white;
+  color: var(--color-black);
+  text-decoration: none;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.slide__link.white {
+  background: #000;
+  color: white;
+}
+
+.slide__compability {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+}
+
+.slide__compability.white {
+  color: black;
+}
+
+@media (max-width: 1439px) {
+
+  .slide__illustration {
+    width: 180%;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+  .center1 {
+    display: flex;
+    padding-top: 87px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+
+  .df {
+    display: flex;
+  }
+
+  .imm {
+    display: none;
+  }
+
+  .item1 {}
+
+  .h2 {
+    width: 301px;
+    color: rgb(15, 15, 15);
+    font-family: Mazzard;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: rgb(84, 84, 84);
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    width: 250px;
+  }
+
+  .slide__link {
+    width: 159px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 73px;
+  }
+
+
+  /* Пример для h2, h3 и кнопки, когда вариант белый */
+  .black-text {
+    color: black;
+  }
+
+  /* Пример для кнопки с белым фоном и черным текстом */
+  .button.white {
+    background-color: black;
+    color: white;
+  }
+
+  /* Общие стили */
+  .slide.white .h2,
+  .slide.white h3 {
+    color: black;
+  }
+
+  .slide.white .slide__link {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+  }
+
+  /* Убедитесь, что у вас есть стили для black варианта, если они необходимы */
+  .slide.black .h2,
+  .slide.black h3 {
+    color: white;
+  }
+
+  .slide.black .slide__link {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+
+  }
+
+  .slide__link-arrow {
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1439px) {
+
+  .center1 {
+    display: flex;
+    padding-top: 87px;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+
+  .df {
+    display: flex;
+    gap: 181px;
+  }
+
+  .imm {
+    width: 520px;
+    height: 688px;
+  }
+
+  .item1 {
+    margin-top: 109px;
+  }
+
+  .h2 {
+    color: rgb(15, 15, 15);
+    font-family: Mazzard;
+    font-size: 66px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+    width: 563px;
+  }
+
+  h3 {
+    margin-top: 18px;
+    color: rgb(84, 84, 84);
+    font-family: Manrope;
+    font-size: 26px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  .slide__link {
+    width: 234px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 60px;
+  }
+
+
+  /* Пример для h2, h3 и кнопки, когда вариант белый */
+  .black-text {
+    color: black;
+  }
+
+  /* Пример для кнопки с белым фоном и черным текстом */
+  .button.white {
+    background-color: black;
+    color: white;
+  }
+
+  /* Общие стили */
+  .slide.white .h2,
+  .slide.white h3 {
+    color: black;
+  }
+
+  .slide.white h3 {
+    margin-top: 38px;
+  }
+
+  .slide.white .slide__link {
+    background-color: black;
+    color: white;
+  }
+
+  /* Убедитесь, что у вас есть стили для black варианта, если они необходимы */
+  .slide.black .h2,
+  .slide.black h3 {
+    color: white;
+  }
+
+  .slide.black h3 {
+    color: #7f7f7f;
+    margin-top: 38px;
+  }
+
+  .slide.black .slide__link {
+    background-color: white;
+    color: black;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.slide__link-arrow {
+  margin-top: 2px;
+}
+
+@media (min-width: 600px) {
+  .clothes {
+    width: 100% !important;
+  }
+
+}
+
+@media (max-width:600px) {
+  .a_center {
+    margin: 20px 0px -20px 0px;
+  }
+
+  .m-b {
+    color: #A3A3A3 !important;
+  }
+
+  .m-w {
+    color: #545454 !important;
+
+  }
+}

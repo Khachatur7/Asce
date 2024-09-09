@@ -1,0 +1,40 @@
+.image-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000053;
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: var(--animation-appear) 0.3s ease;
+    isolation: isolate;
+}
+
+.image-preview__box {
+    background: #F3F3F3;
+    border-radius: 60px;
+    overflow: hidden;
+    display: flex;
+
+}
+
+.image-preview__photo {
+    width: 70vw; 
+    max-width: 70vw;  
+    max-height: 90vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1439px) {
+    .image-preview__box {
+        border-radius: 30px;
+    }
+    .image-preview__photo {
+        width: 95vw;
+        max-width: 95vw;
+    }
+}
